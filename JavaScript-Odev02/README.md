@@ -2,7 +2,7 @@
 
 ## JavaScript-Odev02
 
-[Patika Profilim](https://app.patika.dev/onefourthreebb)
+[Patika Profilim](https://academy.patika.dev/referral/onefourthreebb)
 
 <img src="/assets/images/page-image.png"/>
 
