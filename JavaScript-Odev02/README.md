@@ -4,7 +4,7 @@
 
 [Patika Profilim](https://academy.patika.dev/referral/onefourthreebb)
 
-<img src="/assets/images/page-image.png"/>
+![](https://raw.githubusercontent.com/bugrabasbostanci/Patika/main/JavaScript-Odev02/assets/images/page-image.png)
 
 **Başlangıç Seviye Frontend Web Development Patikası**'nda JavaScript ödevi olarak **Your To Do's** uygulamasını yaptım. **Your To Do's**, görevlerinizi düzenlemek ve yönetmek için tasarlanmış basit ve anlaşılır bir yapılacaklar listesi uygulamasıdır. Proje linki: [Your To Do's](https://todo-opal-three.vercel.app/)
 
