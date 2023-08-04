@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+:root {
+  --nav-BG-COLOR: #f45050;
+  --bio-BG-COLOR: #f0f0f0;
+  --cards-BG-COLOR: #3c486b;
+  --card-BG-COLOR: #f9d949;
+  --text-FF: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* .container {
+  display: flex;
+  flex-direction: column;
+} */
+.alignment {
+  width: 1000px;
+  margin: 0 auto;
+}
+/* Navbar Start */
+.navbar-container {
+  background-color: var(--nav-BG-COLOR);
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name {
+  color: white;
+  font-family: var(--text-FF);
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu ul a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  font-family: var(--text-FF);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu ul a:hover {
+  color: #3c486b;
+}
+/* Bio(main) Start */
+.bio-container {
+  background-color: var(--bio-BG-COLOR);
+}
+.bio {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+.information {
+  width: 400px;
+  font-family: var(--text-FF);
+  font-weight: 450;
+}
+
+.information header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Cards Start */
+.cards-container {
+  background-color: var(--cards-BG-COLOR);
+}
+
+.cards-section {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--card-BG-COLOR);
+  width: 250px;
+  height: 350px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.card h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-family: var(--text-FF);
+  font-size: 30px;
+}
+
+.card p {
+  margin-bottom: 80px;
+  font-family: var(--text-FF);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.card button {
+  border: none;
+  background-color: var(--nav-BG-COLOR);
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: var(--text-FF);
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+}
+
+.card button:hover {
+  border: 2px solid #3c486b;
+  background-color: #f0f0f0;
+  color: #f45050;
+}
+
+/* responsive yapamadım tam olarak. muhtemelen fazla flex ve yanlış flex kullandığım için. */
+@media screen and (max-width: 800px) {
+  .navbar,
+  .menu ul,
+  .bio,
+  .cards-section {
+    flex-direction: column;
+  }
+}
+
+/* flex kullanarak yaptım, daha sonra grid ve flex bir arada kullanarak yap */

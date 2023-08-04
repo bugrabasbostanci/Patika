@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+@font-face {
+  font-family: gt-super;
+  src: url("assets/fonts/GT-SUper-Text-Medium-Trial.otf") format("opentype");
+}
+@font-face {
+  font-family: sohne;
+  src: url("assets/fonts/TestSöhne-Kräftig.otf") format("opentype");
+}
+
+body {
+  margin-top: 70px;
+  /* font-family: "Libre Baskerville", serif; */
+  /* font-family: GT Super;   TODO stay curious */
+
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bg-orange {
+  background-color: #ffc017;
+}
+
+.border__bottom-black {
+  border-bottom: 1px solid rgba(41, 41, 41, 1);
+}
+
+.border__bottom-gray {
+  border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+}
+
+.btn-bgcolor {
+  background-color: rgba(25, 25, 25, 1);
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.btn-bgcolor-white {
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.text-color-white {
+  color: rgba(255, 255, 255, 1);
+}
+
+.text-color-black {
+  color: rgba(8, 8, 8, 1);
+}
+
+.text-color-light__black {
+  color: rgba(41, 41, 41, 1);
+}
+
+.text-color-gray {
+  color: rgba(117, 117, 117, 1);
+}
+
+.text-color-whitish__gray {
+  color: rgba(230, 230, 230, 1);
+}
+
+.ls-1 {
+  letter-spacing: -0.08em;
+}
+
+.star-color {
+  color: rgb(255, 192, 23);
+}
+
+.fs-big {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.fs-sm {
+  font-size: 12px;
+}
+
+.fs-md {
+  font-size: 14px;
+}
+
+.fs-lg {
+  font-size: 16px;
+}
+
+.fs-xl {
+  font-size: 20px;
+}
+
+.fs-special {
+  font-size: 106px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.ml-350 {
+  margin-left: 350px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.btn-hover-black:hover {
+  background-color: black;
+  color: rgba(255, 255, 255, 1);
+  transition: 0.1s;
+}
+
+.btn-hover-white:hover {
+  background-color: rgba(230, 230, 230, 1);
+  color: rgba(41, 41, 41, 1);
+  transition: 0.1s;
+}

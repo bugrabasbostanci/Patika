@@ -1,0 +1,247 @@
+/* 
+!!! nigh light kullanmadan tasarımdaki bazı ayrıntıları fark edemiyorum, bunun sebebi nedir ? 
+
+The designs were created to the following widths:
+- Mobile: 375px  - Desktop: 1440px 
+diyor ama ne anlama geliyor, ne yapmam lazım anlamadım ???
+
+-width ve height kullanımı nasıl olmalı bu tarz card tasarımlarında?
+
+Genel kullanılan bir layout var muhtemelen, bu nedir ? 
+
+Öğrenmelisin bunları !!*!!
+
+-mobile first design yapmadım, yapmalı mıyım ? 
+
+-sağ taraftaki card'ın arka planı galiba sol taraftaki card'ın altında bunu yapamadım ? 
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --text-light: hsl(280, 1%, 59%, 1);
+  --FS: 18px;
+  --FW-1: 500;
+  --FW-2: 700;
+  --FW-3: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/**************************** left-box ***********************/
+
+.left-box {
+  height: 500px;
+  width: 350px;
+  /* min-width: 15%;
+  max-width: 20%; */
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+  /* backgroun-image: linear-gradient kullanımını öğrendim +++ */
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.left-box__title {
+  padding: 2.5rem;
+  opacity: 60%;
+  font-size: 22px;
+  font-weight: var(--FW-1);
+}
+
+.left-box__circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-box__circle--big {
+  font-size: 70px;
+  font-weight: var(--FW-3);
+}
+.left-box__circle--small {
+  opacity: 45%;
+}
+
+.left-box__information {
+  padding: 1.5rem;
+}
+
+.left-box__information--title {
+  font-size: 28px;
+  padding-bottom: 1rem;
+}
+.left-box__information--description {
+  padding: 0 1rem;
+  opacity: 60%;
+}
+
+/**************************** right-box ***********************/
+
+.right-box {
+  height: 500px;
+  width: 350px;
+  /* min-width: 15%;
+  max-width: 20%; */
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 25px;
+}
+
+.right-box__title {
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  font-size: 22px;
+  font-weight: var(--FW-2);
+}
+
+.right-box__results {
+  padding-left: 2.5rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.right-box__result-one {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff6f5;
+  color: var(--light-red);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
+  background-image: url("assets/images/icon-reaction.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 16px;
+}
+
+.result-one {
+  color: var(--dark-gray-blue);
+  font-weight: var(--FW-2);
+}
+
+.right-box__result-two {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fffbf2;
+  color: var(--orange-yellow);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
+  background-image: url("assets/images/icon-memory.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 16px;
+}
+
+.result-two {
+  color: var(--dark-gray-blue);
+  font-weight: var(--FW-2);
+}
+
+.right-box__result-three {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2fafa;
+  color: var(--green-teal);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
+  background-image: url("assets/images/icon-verbal.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 16px;
+}
+
+.result-three {
+  color: var(--dark-gray-blue);
+  font-weight: var(--FW-2);
+}
+
+.right-box__result-four {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3fd;
+  color: var(--cobalt-blue);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
+  background-image: url("assets/images/icon-visual.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 16px;
+}
+
+.result-four {
+  color: var(--dark-gray-blue);
+  font-weight: var(--FW-2);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.right-box__button {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  padding: 16px 24px;
+  width: 80%;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark-gray-blue);
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    width: 375px;
+  }
+  .left-box {
+    border-radius: 0 0 25px 25px;
+  }
+
+  .right-box {
+    border-radius: 25px 25px 0 0;
+  }
+}

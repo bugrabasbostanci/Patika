@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  border: 10px solid #ffef5c;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 94%);
+}
+
+/* NAVBAR */
+.main-nav-container {
+  display: flex;
+  justify-content: center;
+}
+.alignment {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 960px;
+}
+.navbar .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.navbar .photo span {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar .photo img {
+  height: 30px;
+  width: 30px;
+  border: 4px solid #ffef5c;
+  border-radius: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar .menu ul {
+  display: flex;
+}
+.navbar .menu ul a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  padding: 0 10px;
+}
+
+.navbar .menu ul li {
+  margin: 0 20px;
+}
+
+.navbar .menu ul a:hover {
+  color: orange;
+}
+
+/* HERO */
+
+.hero {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 400px;
+}
+
+.hero h1 {
+  background-color: #ffef5c;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 40px;
+  width: 650px;
+  text-align: center;
+}
+
+.hero p {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-align: center;
+  line-height: 24px;
+}
+
+.hero button {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-align: center;
+  background-color: #ffef5c;
+  border: none;
+  height: 30px;
+  width: 100px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.hero button:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.hero button:active {
+  cursor: pointer;
+  background-color: orange;
+}
+
+/* CARDS */
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  margin-bottom: 300px;
+}
+
+.card-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.cards {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 2.5px solid black;
+  border-radius: 10px;
+}
+
+.card1 img,
+.card2 img,
+.card3 img {
+  border-radius: 5px 5px 0 0;
+}
+
+.card1 h2,
+.card2 h2,
+.card3 h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  margin: 20px 20px 10px 20px;
+}
+
+.card1 p,
+.card2 p,
+.card3 p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0 20px 20px 20px;
+}
+
+.card1 button {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-align: center;
+  background-color: #ffef5c;
+  border: none;
+  height: 30px;
+  width: 160px;
+  border-radius: 5px;
+  margin: 5px 20px 5px 20px;
+}
+
+.card2 button,
+.card3 button {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-align: center;
+  background-color: #ffef5c;
+  border: none;
+  height: 30px;
+  width: 160px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.cards button:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+/* BIO */
+.bio {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 400px;
+}
+
+.bio h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.bio .info1,
+.info2,
+.info3 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+}
+
+.bio p {
+  margin: 0px;
+  padding: 5px;
+}
+
+.bio h3 {
+  margin-top: 6px;
+}
+
+/* FORM */
+
+.form {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.form h1,
+p,
+label {
+  font-family: "Roboto", sans-serif;
+}
+
+.form h1 {
+  font-size: 36px;
+}
+
+.form p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.name-input {
+  width: 600px;
+  height: 20px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border: 2px solid #ffef5c;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.email-input {
+  width: 600px;
+  height: 20px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border: 2px solid #ffef5c;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.textarea {
+  width: 600px;
+  height: 100px;
+  border: 2px solid #ffef5c;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.form button {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-align: center;
+  background-color: #ffef5c;
+  border: none;
+  height: 30px;
+  width: 150px;
+  border-radius: 15px;
+}
+
+.form button:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: orange;
+}
+hr {
+  width: 960px;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.footer-logos {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-logos a {
+  margin: 10px;
+}

@@ -1,0 +1,126 @@
+/* @font-face {
+  font-family: "comic";
+  src: url(/assets/fonts/comic.ttf);
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.subtitle {
+  font-size: 40px;
+  font-family: "League Spartan", sans-serif;
+}
+
+#tasklist {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #cbb279;
+  font-size: 20px;
+  transition: 0.2s;
+  list-style-type: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: #333333;
+  font-family: "League Spartan", sans-serif;
+}
+
+ul li:nth-child(odd) {
+  background: #e1d4bb;
+}
+
+ul li:hover {
+  /* background: hsla(206, 24%, 43%, 1); */
+  background: #a79471;
+}
+
+ul li.checked {
+  background: #a0c49d;
+  color: #333333;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 16px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  border: none;
+}
+
+.close:hover {
+  background-color: #7e8d8f;
+  color: #333333;
+}
+
+.header {
+  background-color: #537188;
+  padding: 30px 40px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 90%;
+  padding: 10px;
+  float: none;
+  font-size: 20px;
+  color: #333333;
+}
+
+.button {
+  padding: 10px;
+  width: 10%;
+  background: #cbb279;
+  color: #333333;
+  float: none;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 25px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.button:hover {
+  background-color: #a79471;
+  color: #fff;
+}
+
+.zero-pad {
+  padding-left: 0;
+}

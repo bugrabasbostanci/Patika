@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buğra Başbostancı</title>
+    <link
+      class="title-logo"
+      rel="shortcut icon"
+      href="https://pbs.twimg.com/profile_images/1608871263568642051/HXHiPKNw_400x400.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar | START -->
+    <nav>
+      <div class="main-nav-container">
+        <div class="navbar alignment">
+          <div class="photo">
+            <img
+              src="https://patika-prod.s3-eu-central-1.amazonaws.com/userFiles/onefourthreebb/profilePicture?0.4780044549833131"
+              alt="bb"
+            />
+            <span>Buğra Başbostancı</span>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#top">Home</a></li>
+              <li><a href="#bio">About</a></li>
+              <li><a href="#main-form-container">Contact</a></li>
+              <li>
+                <a href="https://www.youtube.com" target="_blank">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar | END -->
+
+    <!-- Hero | START -->
+    <div class="main-hero-container">
+      <div class="hero alignment">
+        <h1>Buğra Başbostancı</h1>
+        <p>
+          Teknolojiye ve yazılımla ilgilenmeyi seviyorum. Şuan
+          <em>Front-End</em>
+          alanında Patikanın
+          <b
+            >Başlangıç <br />
+            Seviye Frontend Web Development kursunu</b
+          >
+          takip ederek kendimi geliştirmeye çalışıyorum.
+        </p>
+        <a href="#main-form-container"><button>Contact Me</button></a>
+      </div>
+    </div>
+    <!-- Hero | END -->
+
+    <!-- Cards | START -->
+    <div class="main-card-container">
+      <div class="card-container">
+        <div class="card-title">
+          <h1>My Hobbies</h1>
+        </div>
+        <div class="cards alignment">
+          <div class="card card1">
+            <img
+              src="https://beanstalk-9fcd.kxcdn.com/wp-content/uploads/2022/11/Dead-by-Daylight-Wallpaper.jpg"
+              alt=""
+              width="300px"
+              height="200px"
+            />
+            <h2>Dead by Daylight</h2>
+            <p>
+              Dead by Daylight, benim yaklaşık <b><em>1.500</em></b> saat
+              oynadığım favori oyunlarımdan biridir.
+            </p>
+            <button>Daha fazla bilgi için</button>
+          </div>
+          <div class="card card2">
+            <img
+              src="https://img.chip.com.tr/rcman/Cw1280h720q95gm/storage/files/images/2022/11/21/dark-dizisinin-konusu-ne-hic-izlemeyenler-icin-kisa-ozet-B1BJ.jpg"
+              alt="dark"
+              width="300px"
+              height="200px"
+            />
+            <h2>Dark</h2>
+            <p>Dark, bilimkurgu türünde sevdiğim dizilerden biridir.</p>
+            <button>Daha fazla bilgi için</button>
+          </div>
+          <div class="card card3">
+            <img
+              src="https://images.alphacoders.com/121/1214989.jpg"
+              alt="seven"
+              width="300px"
+              height="200px"
+            />
+            <h2>Seven</h2>
+            <p>Seven, suç ve gizem konusunu işleyen eski filmlerden biridir.</p>
+            <button>Daha fazla bilgi için</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cards | END -->
+
+    <!-- Bio | START -->
+    <div id="bio">
+      <div class="bio alignment">
+        <h2>My Experiences</h2>
+        <div class="info1">
+          <h3>Antalya Bilim Üniversitesi</h3>
+          <p>
+            &diams;2019 yılında üniversitde
+            <b>Bilgisayar Müh.</b> Bölümüne başladım.
+          </p>
+        </div>
+        <div class="info2">
+          <h3>Yazılım Dünyası</h3>
+          <p>
+            &diams;2021 yılnda yazılım dünyasına giriş yaptım. CS50,
+            Programlamaya giriş, C, Python, HTML-CSS-JavaScript ile ilk kez
+            tanıştım.
+          </p>
+        </div>
+        <div class="info3">
+          <h3>Patika Front-End Kursu</h3>
+          <p>
+            &diams;2023 yılında yazılım dünyasında Front-End alanında ilerleme
+            kararı aldım ve Patikanın Front-End kursunu takip ederek kendi
+            başıma Web Development öğrenmeye başladım.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Bio | END -->
+
+    <!-- Form | START -->
+    <div id="main-form-container">
+      <div class="form alignment">
+        <h1>Contact Me</h1>
+        <p>
+          Soru sormak veya düşüncelerinizi belirtmek isterseniz mesaj
+          atabilirsiniz.
+        </p>
+        <form action="" method="get">
+          <label class="name-label" for="name">Name</label><br />
+          <input
+            class="name-input"
+            type="text"
+            placeholder="What is your name?"
+            required
+          /><br />
+          <label class="email-label" for="email">Your Email</label><br />
+          <input
+            class="email-input"
+            type="text"
+            placeholder="example@gmail.com"
+            required
+          /><br />
+          <label for="message">Your Message</label><br />
+          <textarea
+            class="textarea"
+            name="message"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your message here..."
+          ></textarea
+          ><br />
+          <button>Send Message</button>
+        </form>
+      </div>
+    </div>
+    <!-- Form | END -->
+    <hr />
+    <!-- Footer | START -->
+    <div class="footer-main-container">
+      <div class="footer alignment">
+        <p>Buğra Başbostancı | All Rights Reserved | © 2023</p>
+        <div class="footer-logos">
+          <a href="#top"
+            ><img
+              src="https://www.freeiconspng.com/thumbs/house-png/house-icon-png-png-27.png"
+              alt="Home"
+              width="30px"
+              height="30px"
+          /></a>
+          <a href="https://www.youtube.com" target="_blank"
+            ><img
+              src="https://www.seekpng.com/png/detail/1006-10064683_youtube-dark-icon-logo-youtube-play-png.png"
+              alt="Youtube Dark Icon - Logo Youtube Play Png@seekpng.com"
+              width="30px"
+              height="20px"
+          /></a>
+          <a href="https://www.google.com" target="_blank"
+            ><img
+              src="https://companieslogo.com/img/orig/GOOG-0ed88f7c.png?t=1633218227"
+              alt="google-logo"
+              height="30px"
+              width="30px"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer | END  -->
+  </body>
+</html>

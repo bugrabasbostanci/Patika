@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buğra Başbostancı</title>
+    <link
+      rel="shortcut icon"
+      href="https://pbs.twimg.com/profile_images/1608871263568642051/HXHiPKNw_400x400.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d50705f12e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- BEM methodology kullanmaya çalıştım -->
+  <body>
+    <div class="container">
+      <!-- Navbar | Start -->
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <img
+            class="navbar__logo--image"
+            src="https://patika-prod.s3-eu-central-1.amazonaws.com/userFiles/onefourthreebb/profilePicture?0.744802193817511"
+            alt="profile picture"
+          />
+          <span class="navbar__logo--title">Buğra Başbostancı</span>
+        </div>
+        <ul class="navbar__menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#info">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+        <button class="navbar__right-box--button" type="button">
+          Let's Go
+        </button>
+      </nav>
+      <!-- Navbar | End -->
+
+      <!-- Hero | Start -->
+      <section class="hero">
+        <span class="hero__little-title"
+          ><a href="https://github.com/bb0143sbw" target="_blank"
+            >&rarr; My GitHub Profile &larr;</a
+          ></span
+        >
+        <h1 class="hero__title">Buğra Başbostancı</h1>
+        <p class="hero__paragraph">
+          Teknolojiyle ve yazılımla ilgilenmeyi seviyorum. Şuan
+          <em>Front-End</em>
+          alanında
+          <b>Patikanın Başlangıç Seviye Frontend Web Development</b> kursunu
+          takip ederek kendimi geliştirmeye çalışıyorum.
+        </p>
+        <a class="hero__button" href="#contact">Contact Me</a>
+      </section>
+      <!-- Hero | End -->
+
+      <!-- Cards | Start -->
+      <section class="cards-section">
+        <div id="hobbies" class="transparent"></div>
+        <h1 class="cards-section__title">My Hobbies</h1>
+        <div class="cards">
+          <div class="cards__card1 card-template">
+            <img
+              class="cards__card1--image"
+              src="https://beanstalk-9fcd.kxcdn.com/wp-content/uploads/2022/11/Dead-by-Daylight-Wallpaper.jpg"
+              alt="dead by daylight"
+            />
+            <h2 class="cards__card1--title">Dead by Daylight</h2>
+            <p class="cards__card1--paragraph">
+              Dead by Daylight, benim yaklaşık 1.500 saat oynadığım favori
+              oyunlarımdan biridir.
+            </p>
+            <button class="cards__card1--button" type="button">
+              Daha fazla için
+            </button>
+          </div>
+          <div class="cards__card2 card-template">
+            <img
+              class="cards__card2--image"
+              src="https://img.chip.com.tr/rcman/Cw1280h720q95gm/storage/files/images/2022/11/21/dark-dizisinin-konusu-ne-hic-izlemeyenler-icin-kisa-ozet-B1BJ.jpg"
+              alt="dark"
+            />
+            <h2 class="cards__card2--title">Dark</h2>
+            <p class="cards__card2--paragraph">
+              Dark, bilimkurgu türünde sevdiğim dizilerden biridir.
+            </p>
+            <button class="cards__card2--button" type="button">
+              Daha fazla için
+            </button>
+          </div>
+          <div class="cards__card3 card-template">
+            <img
+              class="cards__card3--image"
+              src="https://images.alphacoders.com/121/1214989.jpg"
+              alt="seven"
+            />
+            <h2 class="cards__card3--title">Seven</h2>
+            <p class="cards__card3--paragraph">
+              Seven, suç ve gizem konusunu işleyen eski filmlerden biridir.
+            </p>
+            <button class="cards__card3--button" type="button">
+              Daha fazla için
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Cards | End -->
+
+      <!-- Information | Start -->
+      <section class="information">
+        <div id="info" class="transparent"></div>
+        <h1 class="information__title">My Experiences</h1>
+        <h3 class="information__subtitle1">Antalya Bilim Üniversitesi</h3>
+        <p class="information__paragraph1">
+          2019 yılında üniversitde Bilgisayar Müh. Bölümüne başladım.
+        </p>
+        <h3 class="information__subtitle2">Yazılım Dünyası</h3>
+        <p class="information__paragraph2">
+          2021 yılnda yazılım dünyasına giriş yaptım. CS50, Programlamaya giriş,
+          C, Python, HTML-CSS-JavaScript ile ilk kez tanıştım.
+        </p>
+        <h3 class="information__subtitle3">Patika Front-End Kursu</h3>
+        <p class="information__paragraph3">
+          2023 yılında yazılım dünyasında Front-End alanında ilerleme kararı
+          aldım ve Patikanın Front-End kursunu takip ederek kendi başıma Web
+          Development öğrenmeye başladım.
+        </p>
+      </section>
+      <!-- Information | End -->
+
+      <!-- Contact Me | Start -->
+      <section class="contact-me">
+        <div id="contact" class="transparent"></div>
+        <h1 class="contact-me__title">Contact Me</h1>
+        <p class="contact-me__title--paragraph">
+          Soru sormak veya düşüncelerinizi belirtmek isterseniz mesaj
+          atabilirsiniz.
+        </p>
+        <form class="contact-me__form" action="" method="get">
+          <label class="contact-me__form--name-label" for="name">Name</label>
+          <input
+            class="contact-me__form--name-input"
+            type="text"
+            placeholder="What is your name?"
+            required
+          />
+          <label class="contact-me__form--email-label" for="email"
+            >Your Email</label
+          >
+          <input
+            class="contact-me__form--email-input"
+            type="text"
+            placeholder="example@gmail.com"
+            required
+          />
+          <label class="contact-me__form--message-label" for="message"
+            >Your Message</label
+          >
+          <textarea
+            class="contact-me__form-message-textarea"
+            placeholder="Your message here..."
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button class="contact-me__form--button" type="button">
+            Send Message
+          </button>
+        </form>
+      </section>
+      <!-- Form | End -->
+
+      <!-- Footer | Start -->
+      <footer class="footer">
+        <hr class="footer__hr-line" />
+        <div class="footer__section">
+          <p class="footer__paragraph">
+            Buğra Başbostancı | All Rights Reserved | © 2023
+          </p>
+          <div class="footer__icons">
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer | End -->
+    </div>
+  </body>
+</html>

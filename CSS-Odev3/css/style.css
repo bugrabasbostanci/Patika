@@ -1,0 +1,205 @@
+/* PP-9nokta-Images-Gmail içeren unordered list */
+.header {
+  list-style-type: none;
+  overflow: hidden;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Headerın içindeki list itemlerindeki linkler */
+.headerli a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 2px 5px;
+  text-decoration: none;
+  float: right;
+  margin: 0px 7px;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+}
+/* Headerın içindeki list itemlerindeki linklerin üstüne gelince */
+.headerli a:hover {
+  text-decoration: underline;
+}
+
+/* Profil Fotoğrafı */
+.pic.headerli img {
+  border-radius: 15px;
+}
+
+/* google logosu */
+.container {
+  text-align: center;
+  margin: 100px;
+}
+/* arama alanı */
+.search-area {
+  background: #fff;
+  display: flex;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  z-index: 3;
+  height: 44px;
+  margin: 0 auto;
+  margin-top: -77px;
+  width: 582px;
+  border-radius: 30px;
+}
+/* arama alanının üstüne gelince */
+.search-area:hover {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.24), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+/* arama alanı kısmı */
+.search {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 16px;
+  padding-left: 14px;
+}
+/* arama alanının solundaki resim  */
+.search-img {
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  margin-top: -5px;
+}
+/* arama alanının solundaki resimin özellikleri  */
+.search-img span {
+  color: #9aa0a6;
+  height: 20px;
+  width: 20px;
+  margin-top: 0px;
+  display: inline-block;
+  fill: currentColor;
+  line-height: 24px;
+  position: relative;
+}
+/* input yazım alanı */
+.input-enter {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+/* input alanı */
+.input-area {
+  color: transparent;
+  flex: 100%;
+  white-space: pre;
+  font: 16px arial, sans-serif;
+  line-height: 34px;
+  height: 34px !important;
+  display: block;
+}
+/* input yazılan yer */
+.input {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.87);
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -68px;
+  font: 16px arial, sans-serif;
+  line-height: 34px;
+  height: 34px !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  appearance: textfield;
+  cursor: text;
+  width: 480px;
+  border: none;
+}
+
+.voice-img img {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+  margin-top: 5px;
+}
+/*  */
+.buttons {
+  text-align: center;
+}
+
+.googlesearch:hover {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.24), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.feelinglucky:hover {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.24), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* search butonu */
+.googlesearch {
+  margin: 30px 10px;
+  padding: 0 16px;
+  line-height: 27px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5f6368;
+  font-size: 14px;
+  height: 36px;
+  border-radius: 4px;
+}
+/* feeling lucky butonu */
+.feelinglucky {
+  padding: 0 16px;
+  line-height: 27px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5f6368;
+  font-size: 14px;
+  height: 36px;
+  border-radius: 4px;
+}
+/* alttaki nav elemanları */
+.footer {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dfe1e5;
+  border-top: 1px solid #dadce0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: -8px;
+  line-height: 10px;
+  background-color: #f2f2f2;
+}
+/* footerdaki list itemleri */
+.footerli {
+  float: left;
+  list-style-type: none;
+}
+/* footerdaki list itemlerindeki linkler */
+.footerli a {
+  display: block;
+  color: #70757a;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin-left: 14px;
+  margin-right: -20px;
+}
+/* footerdaki list itemlerinin üstüne gelince */
+.footerli a:hover {
+  text-decoration: underline;
+}

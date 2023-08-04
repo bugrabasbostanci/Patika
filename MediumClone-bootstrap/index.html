@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medium</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968906.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- navbar | Start -->
+    <div class="bg-orange border__bottom-black fixed-top py-2 ">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-orange">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="assets/images/medium-logo.png"
+                alt="Logo"
+                width="auto"
+                height="25px"
+                class="d-inline-block align-text-top"
+              />
+              <!-- <span class="align-bottom fs-3 fw-bolder ls-1">Medium</span> -->
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto ">
+                <li class="nav-item text-center">
+                  <a
+                    class="nav-link fs-md text-color-black"
+                    aria-current="page"
+                    href="#"
+                    >Our Story</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ms-3 fs-md text-color-black" href="#"
+                    >Membership</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ms-3 fs-md text-color-black" href="#"
+                    >Write</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ms-3 fs-md text-color-black">Sign In</a>
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="btn btn-bgcolor text-color-white rounded-pill ms-3 py-2 px-3 fs-md btn-hover-black"
+                  >
+                    Get Started
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- navbar | End -->
+
+    <!-- intro | Start -->
+    <div class="bg-orange border__bottom-black ">
+      <div class="container ">
+        <div class="row" >
+          <div class="col-6">
+            <h1 class="fs-special text-color-black display-1 mt-100">
+              Stay curious.
+            </h1>
+            <p class="lead fs-4 lh-1 mt-3 mb-5">
+              Discover stories, thinking, and expertise <br />
+              from writers on any topic.
+            </p>
+            <button
+              class="btn btn-bgcolor text-color-white rounded-pill px-5 py-2 fw-normal mb-100 btn-hover-black"
+              type="button"
+            >
+              Start Reading
+            </button>
+          </div>
+          <div class="col-6 my-3">
+           
+            <!-- class="ml-350" -->
+            <svg class="ml-350"   xmlns="http://www.w3.org/2000/svg" width="572" height="462" viewBox="0 0 572 462">
+              <style>
+                @keyframes appearAnimation {
+                  0% {
+                    opacity: 0;
+                  }
+                  100% {
+                    opacity: 1;
+                  }
+                }
+                @keyframes disappearAnimation {
+                  0% {
+                    opacity: 1;
+                  }
+                  50% {
+                    opacity: 0;
+                  }
+                  100% {
+                    opacity: 1;
+                  }
+                }
+              </style>
+              <script>
+                function createM() {
+                  const m = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                  m.setAttribute("font-size", "22");
+                  m.textContent = "M";
+                  m.setAttribute("font-style", "normal")
+                  m.setAttribute("font-family", "Arial");
+
+                  return m;
+                }
+            
+                function addMs() {
+                  const container = document.getElementById("container");
+                  const totalMs = 50; // Toplam M harfi sayısı (18x18 grid)
+                  const delay = 20; // Her M harfi eklenmesi arasındaki gecikme süresi (ms)
+                  const gridWidth = 572;
+                  const gridHeight = 462;
+                  const cellSize = gridWidth / 18;
+            
+                  const positions = [];
+                  for (let i = 0; i < 18; i++) {
+                    for (let j = 0; j < 18; j++) {
+                      positions.push({
+                        x: i * cellSize + (cellSize / 2),
+                        y: j * cellSize + (cellSize / 2),
+                      });
+                    }
+                  }
+            
+                  shuffleArray(positions);
+            
+                  for (let i = 0; i < totalMs; i++) {
+                    setTimeout(() => {
+                      const m = createM();
+                      const position = positions[i];
+                      const x = position.x + Math.random() * (cellSize / 2) - cellSize / 4;
+                      const y = position.y + Math.random() * (cellSize / 2) - cellSize / 4;
+                      const duration = Math.random() * 2 + 2; // M harfinin animasyon süresi (1-3 saniye arasında rastgele)
+            
+                      m.setAttribute("x", x);
+                      m.setAttribute("y", y);
+                      m.setAttribute("opacity", "0");
+                      m.style.animation = `appearAnimation ${duration}s forwards`;
+                      container.appendChild(m);
+                    }, i * delay);
+                  }
+            
+                  setTimeout(() => {
+                    removeMs();
+                  }, totalMs * delay); // Tüm M harfleri oluşturulduktan sonra kaybolmaya başla
+                }
+            
+                function removeMs() {
+                  const container = document.getElementById("container");
+                  const ms = container.querySelectorAll("text");
+                  const delay = 20; // Her M harfinin kaybolması arasındaki gecikme süresi (ms)
+            
+                  for (let i = 0; i < ms.length / 2; i++) {
+                    setTimeout(() => {
+                      const m = ms[i];
+                      const duration = Math.random() * 2 + 1; // M harfinin animasyon süresi (1-3 saniye arasında rastgele)
+            
+                      m.style.animation = `disappearAnimation ${duration}s forwards`;
+                      setTimeout(() => {
+                        m.remove();
+                      }, duration * 1000);
+                    }, i * delay);
+                  }
+            
+                  setTimeout(() => {
+                    addMs();
+                  }, (ms.length / 2) * delay); // M harfleri kaybolmaya başladıktan sonra tekrar oluşturmaya başla
+                }
+            
+                function shuffleArray(array) {
+                  for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                  }
+                }
+              </script>
+            
+              <g id="container"></g>
+            
+              <script>
+                addMs(); // İlk M harflerini oluştur
+              </script>
+            </svg>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- intro | End -->
+
+    <!-- section - trends | Start -->
+    <div class="border__bottom-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mt-5 mb-3">
+            <i class="bi bi-graph-up-arrow"></i>
+            <span class="fw-semibold fs-lg ms-2">Trending on Medium</span>
+          </div>
+          <!-- article 01 | Start -->
+          <article class="col-4 mb-3">
+            <div class="row">
+              <div class="col-1">
+                <h6 class="text-color-whitish__gray fs-3">01</h6>
+              </div>
+              <div class="col-11">
+                <img class="rounded-circle"
+                src="https://miro.medium.com/v2/resize:fill:40:40/1*Ww-K8a9Dd4D6Nw2ZD1000Q.jpeg"
+                  alt=""
+                  style="width: 20px; height: auto"
+                />
+                <span class="fs-sm ms-1 fw-bold"
+                  >JP Brown</span
+                >
+                <h2 class="fs-lg fw-bolder text-color-black mt-2">
+                  What Really Happens to a 
+                      Human Body at <br> Titanic Depths
+                </h2>
+                <ul class="list-inline fs-sm text-color-gray">
+                  <li class="list-inline-item">June 22</li>
+                  <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                  <li class="list-inline-item">4 min read</li>
+                  <li class="list-inline-item"><i class="bi bi-star-fill star-color"></i></li>
+                </ul>
+              </div>
+            </div>
+            </article>
+             <!-- article 01 | End -->
+
+          <!-- article 02 | Start -->
+          <article class="col-4 mb-3">
+            <div class="row">
+              <div class="col-1">
+                <h6 class="text-color-whitish__gray fs-3">02</h6>
+              </div>
+              <div class="col-11">
+                <img class="rounded-circle"
+                  src="https://miro.medium.com/v2/resize:fill:40:40/1*uT00jLxbMVUKZXclfBv77g.png"
+                  alt=""
+                  style="width: 20px; height: auto"
+                />
+                <span class="fs-sm ms-1 fw-bold"
+                  >Rocco Pendola 
+                  in Making of a Millionaire</span
+                >
+                <h2 class="fs-lg fw-bolder text-color-black mt-2">
+                  America Failed Generation X
+                </h2>
+                <ul class="list-inline fs-sm text-color-gray">
+                  <li class="list-inline-item">June 22</li>
+                  <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                  <li class="list-inline-item">6 min read</li>
+                  <li class="list-inline-item"><i class="bi bi-star-fill star-color"></i></li>
+                </ul>
+              </div>
+            </div>
+            </article>
+             <!-- article 02 | End -->
+
+          <!-- article 03 | Start -->
+          <article class="col-4 mb-3">
+            <div class="row">
+              <div class="col-1">
+                <h6 class="text-color-whitish__gray fs-3">03</h6>
+              </div>
+              <div class="col-11">
+                <img class="rounded-circle"
+                  src="https://miro.medium.com/v2/resize:fill:40:40/1*upiboNSChj1BIvycXiID7w.png"
+                  alt=""
+                  style="width: 20px; height: auto"
+                />
+                <span class="fs-sm ms-1 fw-bold"
+                  >Avi Loeb</span
+                >
+                <h2 class="fs-lg fw-bolder text-color-black mt-2">
+                  Finding a Needle in the Ocean
+                </h2>
+                <ul class="list-inline fs-sm text-color-gray">
+                  <li class="list-inline-item">June 22</li>
+                  <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                  <li class="list-inline-item">5 min read</li>
+                  
+                </ul>
+              </div>
+            </div>
+            </article>
+             <!-- article 03 | End -->
+          <!-- article 04 | Start -->
+          <article class="col-4 mb-3">
+            <div class="row">
+              <div class="col-1">
+                <h6 class="text-color-whitish__gray fs-3">01</h6>
+              </div>
+              <div class="col-11">
+                <img class="rounded-circle"
+                  src="https://miro.medium.com/v2/resize:fill:40:40/1*CUJvjQOlFYmzXWYzBA6SAg.jpeg"
+                  alt=""
+                  style="width: 20px; height: auto"
+                />
+                <span class="fs-sm ms-1 fw-bold"
+                  >Paul Mason
+                <h2 class="fs-lg fw-bold text-color-black mt-2">
+                  Staged chaos: Russia’s real deterrent
+                </h2>
+                <ul class="list-inline fs-sm text-color-gray">
+                  <li class="list-inline-item">June 25</li>
+                  <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                  <li class="list-inline-item">6 min read</li>
+                  <li class="list-inline-item"><i class="bi bi-star-fill star-color"></i></li>
+                  
+                </ul>
+              </div>
+            </div>
+            </article>
+             <!-- article 04 | End -->
+
+          <!-- article 05 | Start -->
+          <article class="col-4 mb-3">
+            <div class="row">
+              <div class="col-1">
+                <h6 class="text-color-whitish__gray fs-3">02</h6>
+              </div>
+              <div class="col-11">
+                <img class="rounded-circle"
+                  src="https://miro.medium.com/v2/resize:fill:40:40/1*lFHRS5diqm4lzFkKQSJTLg.png"
+                  alt=""
+                  style="width: 20px; height: auto"
+                />
+                <span class="fs-sm ms-1 fw-bold"
+                  >Nick Wignall</span
+                >
+                <h2 class="fs-lg fw-bolder text-color-black mt-2">
+                  4 Mental Habits that Cause Low Self-Esteem
+                </h2>
+                <ul class="list-inline fs-sm text-color-gray">
+                  <li class="list-inline-item">June 19</li>
+                  <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                  <li class="list-inline-item">7 min read</li>
+                  <li class="list-inline-item"><i class="bi bi-star-fill star-color"></i></li>
+                </ul>
+              </div>
+            </div>
+            </article>
+             <!-- article 05 | End -->
+
+          <!-- article 06 | Start -->
+          <article class="col-4 mb-3">
+            <div class="row">
+              <div class="col-1">
+                <h6 class="text-color-whitish__gray fs-3">03</h6>
+              </div>
+              <div class="col-11">
+                <img
+                  src="https://miro.medium.com/v2/resize:fill:40:40/1*sHhtYhaCe2Uc3IU0IgKwIQ.png"
+                  alt=""
+                  style="width: 20px; height: auto"
+                />
+                <span class="fs-sm ms-1 fw-bold"
+                  >Medium Staff
+                  in
+                  The Medium Blog</span
+                >
+                <h2 class="fs-lg fw-bolder text-color-black mt-2">
+                  Register now for Medium Day
+                </h2>
+                <ul class="list-inline fs-sm text-color-gray">
+                  <li class="list-inline-item">June 21</li>
+                  <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                  <li class="list-inline-item">2 min read</li>
+                </ul>
+              </div>
+            </div>
+            </article>
+             <!-- article 06 | End -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section - trends | End -->
+
+    <!-- main content | Start -->
+    <div class="">
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-8">
+
+            <!-- article 01 | Start -->
+            <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Medium staff in 3 Min Read</span>
+                  <h2 class="fs-lg fw-bold mt-3">What we’re reading: When modern life and history intersect</h2>
+                  <h3 class="fs-lg text-color-gray">A few Medium stories you may have missed this week</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 5</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Medium</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*523g8yJp6WGlwUZXLbuvQg.png" alt="">
+              </div>
+            </article>
+             <!-- article 01 | End -->
+
+             <!-- article 02 | Start -->
+            <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*ROtLAgltIdICq2DTRUMKqg.jpeg" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Jay Sillings in Sybarite</span>
+                  <h2 class="fs-lg fw-bold mt-3">Starting A New Hobby: What My Research Shows</h2>
+                  <h3 class="fs-lg text-color-gray">Disclaimer: I haven’t done any formal research on this (or any) subject. You will find no evidence of systematic investigation or...</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">Apr 30</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">6 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Art</button>
+                    </li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*4Rq4tt0UegjkPwS0vxkffw.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 02 | End -->
+
+             <!-- article 03 | Start -->
+            <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*4dprBYlKl4UCarEwizFUEg.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Rochelle E. Fisher in The Belladonna Comedy</span>
+                  <h2 class="fs-lg fw-bold mt-3">Dr. Seuss’s Oh! The Places You’ll Go With A Newborn!</h2>
+                  <h3 class="fs-lg text-color-gray">By Rochelle E. Fisher with Illustrations by Marissa Maciel</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 2</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Humor</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*F3d1vaYWATkOm6RY8oIfhg.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 03 | End -->
+
+             <!-- article 04 | Start -->
+             <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*4dprBYlKl4UCarEwizFUEg.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Rochelle E. Fisher in The Belladonna Comedy</span>
+                  <h2 class="fs-lg fw-bold mt-3">Dr. Seuss’s Oh! The Places You’ll Go With A Newborn!</h2>
+                  <h3 class="fs-lg text-color-gray">By Rochelle E. Fisher with Illustrations by Marissa Maciel</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 2</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Humor</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*F3d1vaYWATkOm6RY8oIfhg.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 04 | End -->
+
+             <!-- article 05 | Start -->
+             <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*4dprBYlKl4UCarEwizFUEg.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Rochelle E. Fisher in The Belladonna Comedy</span>
+                  <h2 class="fs-lg fw-bold mt-3">Dr. Seuss’s Oh! The Places You’ll Go With A Newborn!</h2>
+                  <h3 class="fs-lg text-color-gray">By Rochelle E. Fisher with Illustrations by Marissa Maciel</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 2</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Humor</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*F3d1vaYWATkOm6RY8oIfhg.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 05 | End -->
+
+             <!-- article 06 | Start -->
+             <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*4dprBYlKl4UCarEwizFUEg.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Rochelle E. Fisher in The Belladonna Comedy</span>
+                  <h2 class="fs-lg fw-bold mt-3">Dr. Seuss’s Oh! The Places You’ll Go With A Newborn!</h2>
+                  <h3 class="fs-lg text-color-gray">By Rochelle E. Fisher with Illustrations by Marissa Maciel</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 2</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Humor</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*F3d1vaYWATkOm6RY8oIfhg.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 06 | End -->
+
+             <!-- article 07 | Start -->
+             <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*4dprBYlKl4UCarEwizFUEg.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Rochelle E. Fisher in The Belladonna Comedy</span>
+                  <h2 class="fs-lg fw-bold mt-3">Dr. Seuss’s Oh! The Places You’ll Go With A Newborn!</h2>
+                  <h3 class="fs-lg text-color-gray">By Rochelle E. Fisher with Illustrations by Marissa Maciel</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 2</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Humor</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*F3d1vaYWATkOm6RY8oIfhg.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 07 | End -->
+
+             <!-- article 08 | Start -->
+             <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*4dprBYlKl4UCarEwizFUEg.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Rochelle E. Fisher in The Belladonna Comedy</span>
+                  <h2 class="fs-lg fw-bold mt-3">Dr. Seuss’s Oh! The Places You’ll Go With A Newborn!</h2>
+                  <h3 class="fs-lg text-color-gray">By Rochelle E. Fisher with Illustrations by Marissa Maciel</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 2</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Humor</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*F3d1vaYWATkOm6RY8oIfhg.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 08 | End -->
+
+             <!-- article 09 | Start -->
+             <article class="row">
+              <div class="col-8 mt-5">    
+                  <img src="https://miro.medium.com/v2/resize:fill:40:40/1*4dprBYlKl4UCarEwizFUEg.png" alt="" style="width: 20px; height: auto;">
+                  <span class="text-color-light__black fs-sm fw-bold">Rochelle E. Fisher in The Belladonna Comedy</span>
+                  <h2 class="fs-lg fw-bold mt-3">Dr. Seuss’s Oh! The Places You’ll Go With A Newborn!</h2>
+                  <h3 class="fs-lg text-color-gray">By Rochelle E. Fisher with Illustrations by Marissa Maciel</h3>
+                  <ul class="list-inline text-color-gray fs-sm">
+                    <li class="list-inline-item">May 2</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">4 min read</li>
+                    <li class="list-inline-item"><i class="bi bi-dot"></i></li>
+                    <li class="list-inline-item">
+                      <button class="btn btn-sm rounded-pill btn-bgcolor-white text-color-gray btn-hover-white">Humor</button>
+                    </li>
+                    <li class="list-inline-item"><i class="bi bi-star-fill star-color" ></i></li>
+                      <i class="bi bi-bookmark-plus float-end fs-xl mt-3"></i>
+                  </ul>
+              </div>
+              <div class="col-4 mt-5  ">
+                <img src="https://miro.medium.com/v2/resize:fill:200:134/1*F3d1vaYWATkOm6RY8oIfhg.jpeg" alt="">
+              </div>
+            </article>
+             <!-- article 09 | End -->
+          </div>
+         
+
+          <!-- right asidebar | Start -->
+          <div class="col-4 mt-5 ">
+            <div class="sticky-top" style="top: 6rem;">
+              <h2 class="fs-lg fw-bold">Discover more of what matters to you</h2>
+            <!-- sidebar buttons -->
+            <ul class="list-inline ">
+              <li class="list-inline-item my-2">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Programming</button>
+              </li>
+              <li class="list-inline-item my-2">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Data Science</button>
+              </li>
+              <li class="list-inline-item my-2">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Technology</button>
+              </li>
+              <li class="list-inline-item mb-2">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Seld Improvement</button>
+              </li>
+              <li class="list-inline-item">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Writing</button>
+              </li>
+              <li class="list-inline-item">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Relationships</button>
+              </li>
+              <li class="list-inline-item">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Machine Learning</button>
+              </li>
+              <li class="list-inline-item">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Productivity</button>
+              </li>
+              <li class="list-inline-item">
+                <button class="btn btn-bgcolor-white text-color-light__black rounded-pill fs-md btn-hover-white"  type="button">Politics</button>
+              </li>
+            </ul>
+            <div class="border__bottom-gray ">
+              <p class="my-4">
+                <a class="text-decoration-none fs-md " style="color: rgb(39, 158, 39);" href="#">See more topics</a>
+              </p>
+            </div>
+            <!-- asidebar footer -->
+            <ul class="list-inline  mt-4">
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray me-3" href="#">Help</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray me-3" href="#">Status</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray me-3" href="#">Writers</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray me-3" href="#">Block</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray" href="#">Careers</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray" href="#">Privacy</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray me-3" href="#">Terms</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray me-3" href="#">About</a>
+              </li>
+              <li class="list-inline-item fs-md ">
+                <a class="text-decoration-none text-color-gray me-3" href="#">Text to speech</a>
+              </li>
+              
+            </ul>
+            </div>
+          </div>
+          <!-- right asidebar | End -->
+        </div>
+      </div>
+    </div>
+    <!-- main content | End -->
+
+    <!-- Bootstrap JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+body {
+  background-color: #e9ecef;
+}
+/*********************** home page *************************/
+ul {
+  list-style-position: inside;
+}
+
+.home-page__paragraph {
+  font-size: 1.9rem;
+}
+/******************** about-us page **************************/
+.about-us__bg-color {
+  background-color: #e9ecef;
+}
+
+/* Page titles */
+.product__title,
+.about-us__title {
+  color: purple;
+}
+
+/* Product card titles */
+.product__card-title {
+  color: purple;
+}

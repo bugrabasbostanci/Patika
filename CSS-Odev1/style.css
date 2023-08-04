@@ -1,0 +1,24 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #f2cc5c77;
+}
+.about-us {
+  text-align: left;
+}
+
+.product-list {
+  list-style-position: inside;
+}
+
+.nav-header {
+  color: #dc143c;
+}
+
+.article-header {
+  color: purple;
+}
+.product {
+  width: 400px;
+  height: 400px;
+}
